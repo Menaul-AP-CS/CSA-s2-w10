@@ -1,17 +1,14 @@
 public class Principal extends SchoolPerson {
-    private int workAge;
+    
+    private int workage;
 
-    public Principal(String name, int age, String email, int workAge) {
-        super(name, age, email);
-        this.workAge = workAge;
+    public Principal(String name, int age, String email, int workage){
+        super(age, name, email);
+        this.workage = workage;
     }
 
-    public int getWorkAge() {
-        return workAge;
+    public void introduce(){
+        System.out.println("Hello, I’m ," + getName() + "I'm the principal of the school. I’ve been working here for " +  workage + " years!");
     }
 
-    @Override
-    public void introduce() {
-        System.out.println("Hello, I'm " + getName() + ", the principal of the school. I've been working here for " + workAge + " years!");
-    }
 }

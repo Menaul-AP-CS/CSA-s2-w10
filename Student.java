@@ -1,16 +1,28 @@
-public class Student extends SchoolPerson {
-    private int gradeLevel;
+import java.util.ArrayList;
 
-    public Student(String name, String email, int gradeLevel) {
-        super(name, email);
-        this.gradeLevel = gradeLevel;
+public class Student extends SchoolPerson{
+    private int grade;
+    private double gpa;
+    private ArrayList<String> classesEnrolled;
+
+    
+
+    public Student(String name, String email, int age, int grade, double gpa, ArrayList<String> ce){
+        super(age, name, email);
+        this.grade = grade;
+        this.gpa = gpa;
+        classesEnrolled = ce;
     }
 
-    public int getGradeLevel() {
-        return gradeLevel;
+    public void addClasses(String c){
+        classesEnrolled.add(c);
     }
 
-    public void introduce() {
-        System.out.println("Hi, I'm " + getName() + ". I'm in grade " + gradeLevel + ".");
+    public ArrayList<String> getClasses(){
+        return classesEnrolled;
+    }
+
+    public void introduce(){
+        System.out.println("Hello I'm a student, my name is " + getName() + ", my email address is " + getEmail());
     }
 }

@@ -2,20 +2,17 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<String> studentClasses = new ArrayList<String>();
-        studentClasses.add("AP CSA");
-        studentClasses.add("English");
+        ArrayList<String> classList = new ArrayList<String>();
+        classList.add("AP CS A");
+        System.out.println(classList);
 
-        ArrayList<String> teacherCourses = new ArrayList<String>();
-        teacherCourses.add("AP CSA");
-        teacherCourses.add("AP CSP");
-
-        Student s1 = new Student("Alala", 16, "alala@menaulschool.net", 11, 3.9, studentClasses);
-        Teacher t1 = new Teacher("Ms. Liu", 23, "jliu@menaulschool.org", teacherCourses);
-        Principal p1 = new Principal("Dr.Imaginary", 30, "imaginary@menaulschool.org", 12);
-
+        Student s1 = new Student("Ann", "ann@menaulschool.net", 18, 12, 3.3, classList);
+        System.out.println(s1.getClasses());
         s1.introduce();
-        t1.introduce();
+        
+        Principal p1 = new Principal("Mary", 40, "xxx@menaul.net", 12);
         p1.introduce();
+
+        System.out.println(s1);
     }
 }

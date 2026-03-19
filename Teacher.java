@@ -1,19 +1,16 @@
 import java.util.ArrayList;
 
 public class Teacher extends SchoolPerson {
-    private ArrayList<String> coursesTeaching;
+    
+    private ArrayList<String> classesTeaching;
 
-    public Teacher(String name, int age, String email, ArrayList<String> coursesTeaching) {
-        super(name, age, email);
-        this.coursesTeaching = coursesTeaching;
+
+    public Teacher(String name, String email, int age, ArrayList<String> ct){
+        super(age, name, email);
+        classesTeaching = ct;
     }
 
-    public ArrayList<String> getCoursesTeaching() {
-        return coursesTeaching;
-    }
 
-    @Override
-    public void introduce() {
-        System.out.println("Hello, I'm " + getName() + ", contact me at " + getEmail() + ".");
-    }
+
+
 }
